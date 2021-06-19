@@ -1,0 +1,12 @@
+{  "station" : [
+
+    {
+      "id" : 4402 ,
+      "name" : "startion work 4402" ,
+      "ubication" : "fourth floor" ,
+      "type" : "ICQA" ,
+      "status" : "Free" 
+  
+    }
+  ]
+}
