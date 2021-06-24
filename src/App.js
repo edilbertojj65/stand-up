@@ -4,6 +4,7 @@ import Stationform from './components/Stationform';
 import AdminNavBar from './components/Admnavbar';
 import StationList from "./components/StationList";
 
+
 function App() {
   
   const [page, setPage] = useState("List");
@@ -13,9 +14,9 @@ function App() {
      <p>App to create Work station</p>
      <AdminNavBar onChangePage={setPage} />
      
-     {page === "Form" ? <Stationform /> : <StationList />}
-      
-      
+     {page === "Form" ? <Stationform /> : <StationList /> }
+
+     
      </main>
   );
 }

@@ -4,21 +4,19 @@ import StationItem from "./StationItem";
 function StationList() {
   const [station, setStation] = useState([]);
     
-debugger
  
   useEffect(() => {
-    fetch("http://localhost:4000/station")
+    fetch("https://warm-hamlet-92307.herokuapp.com/station")
       .then((r) => r.json())
       .then(station =>  {
-        setStation(station) 
-      })
-              
+       setStation(station) 
+      })       
       
    }, [] );
 
-  
+ 
   function handleDeleteClick(id) {
-    fetch(`http://localhost:4000/station/${id}`, {
+    fetch(`https://warm-hamlet-92307.herokuapp.com/station/${id}`, {
       method: "DELETE",
     })
       .then((r) => r.json())
@@ -29,7 +27,7 @@ debugger
   }
 
   function handleUserChange(id, user) {
-    fetch(`http://localhost:4000/station/${id}`, {
+    fetch(`https://warm-hamlet-92307.herokuapp.com/station/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -46,9 +44,6 @@ debugger
       });
   }
 
-  
-
-
   const stationsItems = station.map((q) => (
     <StationItem
       key={q.id}
@@ -58,8 +53,7 @@ debugger
     />
   ));
 
-
-
+  
   return (
     <section>
       <h1> View stations</h1>

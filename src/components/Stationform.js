@@ -20,7 +20,7 @@ function Stationform(props) {
     
       function handleSubmit(event) {
         event.preventDefault();
-        fetch("http://localhost:4000/station", {
+        fetch("https://warm-hamlet-92307.herokuapp.com/station", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -96,7 +96,7 @@ function Stationform(props) {
                 type="text"
                 name="user"
                 value={formData.user}
-                defaultValue=" "
+                
                 onChange={handleChange}
               />
                      

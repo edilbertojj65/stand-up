@@ -1,6 +1,10 @@
 import React from 'react'
 
+
 function StationItem({ station, onDeleteClick, onUserChange }) {
+
+  
+  debugger
   const { id, name,ubication,type, user, status } = station;
   
    const users = ["edilbj","juanj", "julianj"," "]
@@ -11,6 +15,7 @@ function StationItem({ station, onDeleteClick, onUserChange }) {
     </option>
   ));
 
+  
   function handleDeleteClick() {
     onDeleteClick(id);
   }

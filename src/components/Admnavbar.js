@@ -5,6 +5,7 @@ function AdminNavBar({ onChangePage }) {
     <nav>
       <button onClick={() => onChangePage("Form")}>New Station</button>
       <button onClick={() => onChangePage("List")}>View Stations</button>
+      
     </nav>
   );
 }
